@@ -27,9 +27,17 @@ struct ChatListView: View {
                         .resizable()
                         .frame(width: 40,height: 40)
                 }
+                
+
             }
-            .background(Color(red: 243.0/255.0, green: 243.0/255.0, blue: 243.0/255.0, opacity: 1))
+             .background(Color(red: 243.0/255.0, green: 243.0/255.0, blue: 243.0/255.0, opacity: 1))
         }
+         .onAppear(){
+            UINavigationBar.appearance().backgroundColor =  UIColor(Color(red: 243.0/255.0, green: 243.0/255.0, blue: 243.0/255.0, opacity: 1))
+             
+             
+         }
+        
     }
 }
 
@@ -227,7 +235,7 @@ struct listView : View {
         
         VStack (alignment: .leading) {
             Text("Best Friends")
-                .padding([.top,.bottom],7)
+                .padding([.top,.bottom], 18)
                 .padding(.leading,20)
                 .font(.custom("Inter-Bold", size: 15))
              List {
