@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8EAD55BC2A3ADBC1008EB2F7 /* ChatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAD55BB2A3ADBC1008EB2F7 /* ChatListCell.swift */; };
+		8EAD55BE2A3AE698008EB2F7 /* Inter-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8EAD55BD2A3AE698008EB2F7 /* Inter-Bold.otf */; };
+		8EAD55C02A3AE707008EB2F7 /* Inter-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8EAD55BF2A3AE707008EB2F7 /* Inter-Medium.otf */; };
+		8EAD55C32A3AE9AC008EB2F7 /* CHButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAD55C22A3AE9AC008EB2F7 /* CHButton.swift */; };
+		8EAD55C72A3AEB92008EB2F7 /* CHColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAD55C62A3AEB92008EB2F7 /* CHColors.swift */; };
 		8EDD85632A3A3623005BC967 /* ChatScreenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD85622A3A3623005BC967 /* ChatScreenApp.swift */; };
 		8EDD85652A3A3623005BC967 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD85642A3A3623005BC967 /* ContentView.swift */; };
 		8EDD85672A3A3625005BC967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EDD85662A3A3625005BC967 /* Assets.xcassets */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8EAD55BB2A3ADBC1008EB2F7 /* ChatListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListCell.swift; sourceTree = "<group>"; };
+		8EAD55BD2A3AE698008EB2F7 /* Inter-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.otf"; sourceTree = "<group>"; };
+		8EAD55BF2A3AE707008EB2F7 /* Inter-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.otf"; sourceTree = "<group>"; };
+		8EAD55C22A3AE9AC008EB2F7 /* CHButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHButton.swift; sourceTree = "<group>"; };
+		8EAD55C62A3AEB92008EB2F7 /* CHColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHColors.swift; sourceTree = "<group>"; };
 		8EDD855F2A3A3623005BC967 /* ChatScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDD85622A3A3623005BC967 /* ChatScreenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenApp.swift; sourceTree = "<group>"; };
 		8EDD85642A3A3623005BC967 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -25,6 +35,7 @@
 		8EDD85712A3A364B005BC967 /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
 		8EDD85732A3A365B005BC967 /* ChatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewModel.swift; sourceTree = "<group>"; };
 		8EDD85752A3A3678005BC967 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		8EDD857A2A3A4D4B005BC967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +49,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8EAD55C12A3AE97C008EB2F7 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				8EAD55C22A3AE9AC008EB2F7 /* CHButton.swift */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		8EAD55C42A3AEADC008EB2F7 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8EAD55C52A3AEAEB008EB2F7 /* Color */,
+				8EDD85772A3A4C5F005BC967 /* Font */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		8EAD55C52A3AEAEB008EB2F7 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				8EAD55C62A3AEB92008EB2F7 /* CHColors.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
 		8EDD85562A3A3623005BC967 = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +93,9 @@
 		8EDD85612A3A3623005BC967 /* ChatScreen */ = {
 			isa = PBXGroup;
 			children = (
+				8EAD55C42A3AEADC008EB2F7 /* SupportingFiles */,
+				8EAD55C12A3AE97C008EB2F7 /* CustomUI */,
+				8EDD857A2A3A4D4B005BC967 /* Info.plist */,
 				8EDD85702A3A362E005BC967 /* ChatScreen */,
 				8EDD85622A3A3623005BC967 /* ChatScreenApp.swift */,
 				8EDD85642A3A3623005BC967 /* ContentView.swift */,
@@ -80,8 +119,18 @@
 				8EDD85712A3A364B005BC967 /* ChatListView.swift */,
 				8EDD85732A3A365B005BC967 /* ChatListViewModel.swift */,
 				8EDD85752A3A3678005BC967 /* ChatModel.swift */,
+				8EAD55BB2A3ADBC1008EB2F7 /* ChatListCell.swift */,
 			);
 			path = ChatScreen;
+			sourceTree = "<group>";
+		};
+		8EDD85772A3A4C5F005BC967 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				8EAD55BF2A3AE707008EB2F7 /* Inter-Medium.otf */,
+				8EAD55BD2A3AE698008EB2F7 /* Inter-Bold.otf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +193,8 @@
 			files = (
 				8EDD856A2A3A3625005BC967 /* Preview Assets.xcassets in Resources */,
 				8EDD85672A3A3625005BC967 /* Assets.xcassets in Resources */,
+				8EAD55BE2A3AE698008EB2F7 /* Inter-Bold.otf in Resources */,
+				8EAD55C02A3AE707008EB2F7 /* Inter-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,10 +205,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EAD55C32A3AE9AC008EB2F7 /* CHButton.swift in Sources */,
 				8EDD85762A3A3678005BC967 /* ChatModel.swift in Sources */,
 				8EDD85652A3A3623005BC967 /* ContentView.swift in Sources */,
 				8EDD85722A3A364B005BC967 /* ChatListView.swift in Sources */,
+				8EAD55BC2A3ADBC1008EB2F7 /* ChatListCell.swift in Sources */,
 				8EDD85742A3A365B005BC967 /* ChatListViewModel.swift in Sources */,
+				8EAD55C72A3AEB92008EB2F7 /* CHColors.swift in Sources */,
 				8EDD85632A3A3623005BC967 /* ChatScreenApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,17 +344,19 @@
 				DEVELOPMENT_TEAM = 5L6T5E85XQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChatScreen/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.com.sudeb.ChatScreen;
+				PRODUCT_BUNDLE_IDENTIFIER = com.com.sudeb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -319,17 +375,19 @@
 				DEVELOPMENT_TEAM = 5L6T5E85XQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChatScreen/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.com.sudeb.ChatScreen;
+				PRODUCT_BUNDLE_IDENTIFIER = com.com.sudeb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
