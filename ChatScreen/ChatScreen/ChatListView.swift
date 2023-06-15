@@ -121,6 +121,8 @@ struct ChatControlOptionsView : View {
                 Image("background")
                     .resizable()
                     .frame(width: UIScreen.main.bounds.size.width / 6,height: UIScreen.main.bounds.size.height / 20)
+                    .cornerRadius(radius: UIScreen.main.bounds.size.height / 20, corners: [.topLeft,.topRight,.bottomLeft,.bottomRight])
+                    .shadow(color: Color.gray, radius: 0.5, x: 0, y: 1)
             }
             
             Button {
@@ -245,6 +247,7 @@ struct listView : View {
                 }
                 .listRowSeparator(.visible)
             }
+            .cornerRadius(radius: 10, corners: [.topLeft,.topRight,.bottomLeft,.bottomRight])
             .padding([.leading,.trailing],20)
             .frame(height:((bestFriendChatListArr.count > 4) ? (60.0 * 4.0) : ((CGFloat(bestFriendChatListArr.count) * 1.0) * 60.0) ))
             .listStyle(.plain)
@@ -264,6 +267,7 @@ struct listView : View {
                 }
                 .listRowSeparator(.visible)
             }
+            .cornerRadius(radius: 10, corners: [.topLeft,.topRight,.bottomLeft,.bottomRight])
             .shadow(color: Color.gray, radius: 0.5, x: 0, y: 1)
             .padding([.leading,.trailing],20)
             .listStyle(.plain)

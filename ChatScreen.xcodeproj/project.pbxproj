@@ -12,6 +12,7 @@
 		8EAD55C02A3AE707008EB2F7 /* Inter-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8EAD55BF2A3AE707008EB2F7 /* Inter-Medium.otf */; };
 		8EAD55C32A3AE9AC008EB2F7 /* CHButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAD55C22A3AE9AC008EB2F7 /* CHButton.swift */; };
 		8EAD55C72A3AEB92008EB2F7 /* CHColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAD55C62A3AEB92008EB2F7 /* CHColors.swift */; };
+		8EAD55C92A3B3EA7008EB2F7 /* CHShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAD55C82A3B3EA7008EB2F7 /* CHShape.swift */; };
 		8EDD85632A3A3623005BC967 /* ChatScreenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD85622A3A3623005BC967 /* ChatScreenApp.swift */; };
 		8EDD85652A3A3623005BC967 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD85642A3A3623005BC967 /* ContentView.swift */; };
 		8EDD85672A3A3625005BC967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EDD85662A3A3625005BC967 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		8EAD55BF2A3AE707008EB2F7 /* Inter-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.otf"; sourceTree = "<group>"; };
 		8EAD55C22A3AE9AC008EB2F7 /* CHButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHButton.swift; sourceTree = "<group>"; };
 		8EAD55C62A3AEB92008EB2F7 /* CHColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHColors.swift; sourceTree = "<group>"; };
+		8EAD55C82A3B3EA7008EB2F7 /* CHShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHShape.swift; sourceTree = "<group>"; };
 		8EDD855F2A3A3623005BC967 /* ChatScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDD85622A3A3623005BC967 /* ChatScreenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenApp.swift; sourceTree = "<group>"; };
 		8EDD85642A3A3623005BC967 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				8EAD55C22A3AE9AC008EB2F7 /* CHButton.swift */,
+				8EAD55C82A3B3EA7008EB2F7 /* CHShape.swift */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				8EDD85762A3A3678005BC967 /* ChatModel.swift in Sources */,
 				8EDD85652A3A3623005BC967 /* ContentView.swift in Sources */,
 				8EDD85722A3A364B005BC967 /* ChatListView.swift in Sources */,
+				8EAD55C92A3B3EA7008EB2F7 /* CHShape.swift in Sources */,
 				8EAD55BC2A3ADBC1008EB2F7 /* ChatListCell.swift in Sources */,
 				8EDD85742A3A365B005BC967 /* ChatListViewModel.swift in Sources */,
 				8EAD55C72A3AEB92008EB2F7 /* CHColors.swift in Sources */,

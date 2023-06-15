@@ -10,7 +10,9 @@ import SwiftUI
 struct ChatListCell: View {
     
     var chatModel : UserChatListModel
-    
+    var isFirstCell : Bool = false
+    var isLastCell : Bool = false
+
     var body: some View {
         VStack {
             HStack{
