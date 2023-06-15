@@ -11,10 +11,11 @@ import SwiftUI
 struct SendButton : ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .padding(.all,8)
+            .padding([.leading, .trailing],15)
+            .padding([.top, .bottom],8)
             .background(Color.clear)
             .foregroundColor(CHColors.buttonBlue)
-            .font(.custom("Inter-Bold", size: 12))
+            .font(.custom("Inter-Bold", size: 15))
             .overlay(
                 RoundedRectangle(cornerRadius: 20)
                     .stroke(CHColors.buttonBlue, lineWidth: 1.5)
