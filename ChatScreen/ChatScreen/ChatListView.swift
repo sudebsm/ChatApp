@@ -45,6 +45,7 @@ struct ChatListView: View {
                 }
             }
              .background(Color(red: 243.0/255.0, green: 243.0/255.0, blue: 243.0/255.0, opacity: 1))
+             .navigationBarTitleDisplayMode(.inline)
         }
          .onAppear(){
             UINavigationBar.appearance().backgroundColor =  UIColor(Color(red: 243.0/255.0, green: 243.0/255.0, blue: 243.0/255.0, opacity: 1))
@@ -63,7 +64,7 @@ struct PlayBackView : View {
             ZStack {
                 Rectangle()
                     .fill(Color.clear)
-                    .frame(width: UIScreen.main.bounds.size.width - 20, height: 200)
+                    .frame(width: UIScreen.main.bounds.size.width - 20, height: 150)
                     .padding(0)
                     .background(Color(red: 206.0/255.0, green: 199.0/255.0, blue: 244.0/255.0, opacity: 1))
                     .cornerRadius(10.0)
@@ -313,7 +314,7 @@ struct ChatListView_Previews: PreviewProvider {
 
 extension CGFloat {
     
-    static let bottomHeight = (UIScreen.main.bounds.size.height / 20) + 150 + 50
+    static let bottomHeight = (UIScreen.main.bounds.size.height / 20) + 200 + 50
     static let extimatedTopHeight = UIScreen.main.bounds.size.height - bottomHeight
     static let listViewCellHeight =  59.0
     static let listViewCellInnerHeight =  37.0
@@ -321,7 +322,7 @@ extension CGFloat {
 }
 
 extension Int {
-    static let remainingTopHeight = Int(CGFloat.extimatedTopHeight - 210)
+    static let remainingTopHeight = Int(CGFloat.extimatedTopHeight - 100)
     static let recentMaxCellNo = 4
     static let friendsMaxCellNo = 3
     
