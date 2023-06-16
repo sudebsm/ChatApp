@@ -12,10 +12,26 @@ struct ChatListView: View {
     @State private var bestFriendChatListArr = UserChatListModel.bestFriendPreview()
     @State private var recentChatListArr = UserChatListModel.recentPreview()
     
+    init(){
+        
+        print("Screen Height")
+        print(UIScreen.main.bounds.height)
+        
+        print("Bottom Height")
+        print(CGFloat.bottomHeight)
+        
+        print("Screen Top Height")
+        print(CGFloat.extimatedTopHeight)
+        
+        print("Cells")
+        print(Int.friendsMaxCellNoD,Int.recentMaxCellNoD)
+
+    }
     var body: some View {
         NavigationView {
             VStack {
                 listView(bestFriendChatListArr: bestFriendChatListArr, recentChatListArr: recentChatListArr)
+                Spacer()
                 ChatControlOptionsView()
                 PlayBackView()
             }
@@ -43,7 +59,6 @@ struct PlayBackView : View {
     
     var body: some View {
         
-        
         VStack{
             ZStack {
                 Rectangle()
@@ -52,12 +67,10 @@ struct PlayBackView : View {
                     .padding(0)
                     .background(Color(red: 206.0/255.0, green: 199.0/255.0, blue: 244.0/255.0, opacity: 1))
                     .cornerRadius(10.0)
-                
                 PlayBackControlsView()
             }
             
             ZStack {
-                
                 Rectangle()
                     .fill(Color.clear)
                     .frame(width: UIScreen.main.bounds.size.width, height: 50)
@@ -99,42 +112,55 @@ struct ChatControlOptionsView : View {
             } label: {
                 Image("advanced")
                     .resizable()
-                    .frame(width: UIScreen.main.bounds.size.width / 6,height: UIScreen.main.bounds.size.height / 20)
+                    .cornerRadius(radius: UIScreen.main.bounds.size.height / 20, corners: [.topLeft,.topRight,.bottomLeft,.bottomRight])
+                    .shadow(color: Color.gray, radius: 0.5, x: 0, y: 1)
             }
+            .frame(width: UIScreen.main.bounds.size.width / 6,height: UIScreen.main.bounds.size.height / 20)
+
             
             Button {
                 
             } label: {
                 Image("smojis")
                     .resizable()
-                    .frame(width: UIScreen.main.bounds.size.width / 6,height: UIScreen.main.bounds.size.height / 20)
+                    .cornerRadius(radius: UIScreen.main.bounds.size.height / 20, corners: [.topLeft,.topRight,.bottomLeft,.bottomRight])
+                    .shadow(color: Color.gray, radius: 0.5, x: 0, y: 1)
             }
+            .frame(width: UIScreen.main.bounds.size.width / 6,height: UIScreen.main.bounds.size.height / 20)
+
             
             Button {
                 
             } label: {
                 Image("background")
                     .resizable()
-                    .frame(width: UIScreen.main.bounds.size.width / 6,height: UIScreen.main.bounds.size.height / 20)
                     .cornerRadius(radius: UIScreen.main.bounds.size.height / 20, corners: [.topLeft,.topRight,.bottomLeft,.bottomRight])
                     .shadow(color: Color.gray, radius: 0.5, x: 0, y: 1)
             }
+            .frame(width: UIScreen.main.bounds.size.width / 6,height: UIScreen.main.bounds.size.height / 20)
+
             
             Button {
                 
             } label: {
                 Image("scheduleTime")
                     .resizable()
-                    .frame(width: UIScreen.main.bounds.size.width / 6,height: UIScreen.main.bounds.size.height / 20)
+                    .cornerRadius(radius: UIScreen.main.bounds.size.height / 20, corners: [.topLeft,.topRight,.bottomLeft,.bottomRight])
+                    .shadow(color: Color.gray, radius: 0.5, x: 0, y: 1)
             }
+            .frame(width: UIScreen.main.bounds.size.width / 6,height: UIScreen.main.bounds.size.height / 20)
+
             
             Button {
                 
             } label: {
                 Image("voice")
                     .resizable()
-                    .frame(width: UIScreen.main.bounds.size.width / 6,height: UIScreen.main.bounds.size.height / 20)
+                    .cornerRadius(radius: UIScreen.main.bounds.size.height / 20, corners: [.topLeft,.topRight,.bottomLeft,.bottomRight])
+                    .shadow(color: Color.gray, radius: 0.5, x: 0, y: 1)
             }
+            .frame(width: UIScreen.main.bounds.size.width / 6,height: UIScreen.main.bounds.size.height / 20)
+
             
         }
         .frame(width: UIScreen.main.bounds.size.width)
@@ -238,14 +264,14 @@ struct listView : View {
                  ForEach(bestFriendChatListArr.indices) { index in
                      let isFastIndex = (index == 0) ? true : false
                      let isLastIndex = (index == bestFriendChatListArr.count - 1) ? true :  false
-                     ChatListCell(chatModel: recentChatListArr[index],isFirstCell: isFastIndex, isLastCell: isLastIndex)
-                     .frame(height:40)
+                     ChatListCell(chatModel: bestFriendChatListArr[index],isFirstCell: isFastIndex, isLastCell: isLastIndex)
+                         .frame(height:.listViewCellInnerHeight)
                  }
                 .listRowSeparator(.hidden)
             }
             .cornerRadius(radius: 10, corners: [.topLeft,.topRight,.bottomLeft,.bottomRight])
             .padding([.leading,.trailing],20)
-            .frame(height:((bestFriendChatListArr.count > 4) ? (60.0 * 4.0) : ((CGFloat(bestFriendChatListArr.count) * 1.0) * 60.0) ))
+            .frame(height:((bestFriendChatListArr.count > Int.friendsMaxCellNoD) ? (.listViewCellHeight * CGFloat(Int.friendsMaxCellNoD)) : ((CGFloat(bestFriendChatListArr.count) * 1.0) * .listViewCellHeight) ))
             .listStyle(.plain)
             .shadow(color: Color.gray, radius: 0.5, x: 0, y: 1)
  
@@ -261,7 +287,7 @@ struct listView : View {
                     let isFastIndex = (index == 0) ? true : false
                     let isLastIndex = (index == recentChatListArr.count - 1) ? true :  false
                     ChatListCell(chatModel: recentChatListArr[index],isFirstCell: isFastIndex, isLastCell: isLastIndex)
-                    .frame(height:40)
+                        .frame(height:.listViewCellInnerHeight)
                 }
                 .listRowSeparator(.hidden)
             }
@@ -269,9 +295,7 @@ struct listView : View {
             .shadow(color: Color.gray, radius: 0.5, x: 0, y: 1)
             .padding([.leading,.trailing],20)
             .listStyle(.plain)
-            .frame(height:((recentChatListArr.count > 4) ? (60.0 * 4.0) : ((CGFloat(recentChatListArr.count) * 1.0) * 60.0) ))
-             
-            
+            .frame(height:((recentChatListArr.count > Int.recentMaxCellNoD) ? (.listViewCellHeight * CGFloat(Int.recentMaxCellNoD)) : ((CGFloat(recentChatListArr.count) * 1.0) * .listViewCellHeight) ))
         }
         .onAppear(){
             UITableView.appearance().bounces = false
@@ -284,4 +308,30 @@ struct ChatListView_Previews: PreviewProvider {
     static var previews: some View {
         ChatListView()
     }
+}
+
+
+extension CGFloat {
+    
+    static let bottomHeight = (UIScreen.main.bounds.size.height / 20) + 150 + 50
+    static let extimatedTopHeight = UIScreen.main.bounds.size.height - bottomHeight
+    static let listViewCellHeight =  59.0
+    static let listViewCellInnerHeight =  37.0
+
+}
+
+extension Int {
+    static let remainingTopHeight = Int(CGFloat.extimatedTopHeight - 150)
+    static let recentMaxCellNo = 4
+    static let friendsMaxCellNo = 3
+    
+    static let recentMaxCellNoD = Int(Double.recentMaxCellNo1)
+    static let friendsMaxCellNoD = Int(Double.friendsMaxCellNo1)
+
+}
+
+extension Double {
+    static let estimatedTotCells = Double(.remainingTopHeight/(Int(CGFloat.listViewCellHeight) + 2))
+    static let friendsMaxCellNo1 = floor((estimatedTotCells/2.0))
+    static let recentMaxCellNo1 = floor(estimatedTotCells - friendsMaxCellNo1)
 }
