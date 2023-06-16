@@ -28,7 +28,7 @@ struct ChatListCell: View {
                     .padding(.leading,10)
                 
                 Text(chatModel.name)
-                    .font(.custom("Inter-Medium", size: 20))
+                    .font(.custom("Inter-Medium", size: 16))
                     .foregroundColor(CHColors.titleColor)
                 Spacer()
                 

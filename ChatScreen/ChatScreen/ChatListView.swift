@@ -314,7 +314,7 @@ struct ChatListView_Previews: PreviewProvider {
 
 extension CGFloat {
     
-    static let bottomHeight = (UIScreen.main.bounds.size.height / 20) + 200 + 50
+    static let bottomHeight = (UIScreen.main.bounds.size.height / 20) + 210 + 50
     static let extimatedTopHeight = UIScreen.main.bounds.size.height - bottomHeight
     static let listViewCellHeight =  59.0
     static let listViewCellInnerHeight =  37.0
