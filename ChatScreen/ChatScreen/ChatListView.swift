@@ -332,7 +332,7 @@ extension Int {
 }
 
 extension Double {
-    static let estimatedTotCells = Double(.remainingTopHeight/(Int(CGFloat.listViewCellHeight) + 5))
+    static let estimatedTotCells = Double(.remainingTopHeight/(Int(CGFloat.listViewCellHeight) + 10))
     static let friendsMaxCellNo1 = floor((estimatedTotCells/2.0))
     static let recentMaxCellNo1 = floor(estimatedTotCells - friendsMaxCellNo1)
 }
