@@ -258,7 +258,7 @@ struct listView : View {
         
         VStack (alignment: .leading) {
             Text("Best Friends")
-                .padding([.top,.bottom], 7)
+                .padding(.bottom, 7)
                 .padding(.leading,20)
                 .font(.custom("Inter-Bold", size: 15))
              List {
