@@ -12,13 +12,13 @@ struct SendButton : ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding([.leading, .trailing],15)
-            .padding([.top, .bottom],8)
+            .padding([.top, .bottom],6)
             .background(Color.clear)
             .foregroundColor(CHColors.buttonBlue)
-            .font(.custom("Inter-Bold", size: 15))
+            .font(.custom("Inter-Bold", size: 12))
             .overlay(
                 RoundedRectangle(cornerRadius: 20)
-                    .stroke(CHColors.buttonBlue, lineWidth: 1.5)
+                    .stroke(CHColors.buttonBlue, lineWidth: 1.6)
             )
     }
     

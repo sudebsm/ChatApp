@@ -27,15 +27,11 @@ struct ChatListView: View {
                         .resizable()
                         .frame(width: 40,height: 40)
                 }
-                
-
             }
              .background(Color(red: 243.0/255.0, green: 243.0/255.0, blue: 243.0/255.0, opacity: 1))
         }
          .onAppear(){
             UINavigationBar.appearance().backgroundColor =  UIColor(Color(red: 243.0/255.0, green: 243.0/255.0, blue: 243.0/255.0, opacity: 1))
-             
-             
          }
         
     }
@@ -49,7 +45,6 @@ struct PlayBackView : View {
         
         
         VStack{
-            
             ZStack {
                 Rectangle()
                     .fill(Color.clear)
@@ -218,7 +213,6 @@ struct PlayBackControlsView : View {
                     .frame(width: UIScreen.main.bounds.size.width / 8,height: UIScreen.main.bounds.size.width / 8)
             }
         }
-        
     }
 }
 
@@ -237,15 +231,17 @@ struct listView : View {
         
         VStack (alignment: .leading) {
             Text("Best Friends")
-                .padding([.top,.bottom], 18)
+                .padding([.top,.bottom], 7)
                 .padding(.leading,20)
                 .font(.custom("Inter-Bold", size: 15))
              List {
-                ForEach(bestFriendChatListArr) { model in
-                    ChatListCell(chatModel: model)
-                    .frame(height:40)
-                }
-                .listRowSeparator(.visible)
+                 ForEach(bestFriendChatListArr.indices) { index in
+                     let isFastIndex = (index == 0) ? true : false
+                     let isLastIndex = (index == bestFriendChatListArr.count - 1) ? true :  false
+                     ChatListCell(chatModel: recentChatListArr[index],isFirstCell: isFastIndex, isLastCell: isLastIndex)
+                     .frame(height:40)
+                 }
+                .listRowSeparator(.hidden)
             }
             .cornerRadius(radius: 10, corners: [.topLeft,.topRight,.bottomLeft,.bottomRight])
             .padding([.leading,.trailing],20)
@@ -257,15 +253,17 @@ struct listView : View {
             
             Text("Recents")
                 .font(.custom("Inter-Bold", size: 15))
-                .padding(.leading,20)
                 .padding([.top,.bottom],7)
+                .padding(.leading,20)
 
             List {
-                ForEach(recentChatListArr) { model in
-                    ChatListCell(chatModel: model)
+                ForEach(recentChatListArr.indices) { index in
+                    let isFastIndex = (index == 0) ? true : false
+                    let isLastIndex = (index == recentChatListArr.count - 1) ? true :  false
+                    ChatListCell(chatModel: recentChatListArr[index],isFirstCell: isFastIndex, isLastCell: isLastIndex)
                     .frame(height:40)
                 }
-                .listRowSeparator(.visible)
+                .listRowSeparator(.hidden)
             }
             .cornerRadius(radius: 10, corners: [.topLeft,.topRight,.bottomLeft,.bottomRight])
             .shadow(color: Color.gray, radius: 0.5, x: 0, y: 1)

@@ -14,17 +14,18 @@ struct ChatListCell: View {
     var isLastCell : Bool = false
 
     var body: some View {
-        VStack {
+        VStack (alignment: .center){
             HStack{
                 Image(chatModel.userImage)
                     .resizable()
+                    .scaledToFit()
                     .frame(width: 40, height: 40)
                     .foregroundColor(.white)
                     .background(Color.clear)
                     .overlay(
                         Circle()
                             .stroke(.clear, lineWidth: 1))
-                    .padding(.leading,UIScreen.main.bounds.width/20)
+                    .padding(.leading,10)
                 
                 Text(chatModel.name)
                     .font(.custom("Inter-Medium", size: 20))
@@ -36,7 +37,13 @@ struct ChatListCell: View {
                     
                 }
                 .buttonStyle(SendButton())
-                .padding(.trailing,UIScreen.main.bounds.width/20)
+                .padding(.trailing,0)
+            }
+            .padding([.top,.bottom ],2)
+            if (!isLastCell){
+                Divider()
+                    .padding([.leading,.trailing], -20)
+                    .padding([.top,.bottom],0)
             }
         }
     }
